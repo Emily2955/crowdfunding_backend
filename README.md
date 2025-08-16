@@ -9,13 +9,12 @@
 {{ Who are your intended audience? How will they use the website? }}
 
 ### Front End Pages/Functionality
-- {{ A page on the front end }}
-    - {{ A list of dot-points showing functionality is available on this page }}
-    - {{ etc }}
-    - {{ etc }}
-- {{ A second page available on the front end }}
-    - {{ Another list of dot-points showing functionality }}
-    - {{ etc }}
+- Home Page
+    - Featured kickstarters
+- Create New Fundraiser Page
+    - Form with fundraiser details
+    - Ability to submit
+    - Nice error page for validation
 
 ### API Spec
 {{ Fill out the table below to define your endpoints. An example of what this might look like is shown at the bottom of the page. 
