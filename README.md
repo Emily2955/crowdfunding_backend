@@ -3,10 +3,11 @@ Emily Sheridan
 
 ## Planning:
 ### Concept/Name
-**Performance Pets** is a
+**Performance Pets** is a fundraising platform to assist talented pets to develop and train for a future career in the performing arts.
 
 ### Intended Audience/User Stories
-{{ Who are your intended audience? How will they use the website? }}
+- Fundraiser owners: For people who believe their pet should have a career in the performing arts, such as acting on stage in a musical or on the big screen, and want to fundraise for their pet's acting/singing/dancing lessons. 
+- Supporters: For people who are supporters of the arts and up-and-coming thespians, regardless of species. 
 
 ### Front End Pages/Functionality
 
