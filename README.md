@@ -1,40 +1,54 @@
 # Crowdfunding Back End
-{{ your name here }}
+Emily Sheridan
 
 ## Planning:
 ### Concept/Name
-{{ Include a short description of your website concept here. }}
+**Performance Pets** is a
 
 ### Intended Audience/User Stories
 {{ Who are your intended audience? How will they use the website? }}
 
 ### Front End Pages/Functionality
-- Home Page
-    - Featured kickstarters
-- Search Page
-  - Search specific fundraiser
-- Create New Fundraiser Page
-    - Form with fundraiser details
-    - Ability to submit
-    - Nice error page for validation
-- Display Fundraiser
-    - Shows all information about fundraiser
-    - Show all pledges made so far
+
+#### Landing Page (Home Page)
+- **Fundraiser platform summary** Brief overview about what this fundraising platform has been designed for and who can fundraise on it.
+- **List of fundraisers** Featured open fundraisers ('featured' defn TBC but could be newest created, highest pledges, lowest pledges etc). Has text saying to click on the fundraiser name for more details.
+- **Log In / Sign Up** On side of page, with user name and password elements and "Log In" CTA button. Clicking Log In will keep you on the landing page, but in the logged in state. Under the Log In CTA, there is text saying "Want to create your own fundraiser or make a pledge? Sign Up now", with words 'Sign Up' being linked to a new Sign Up page. 
+- **Search** function
+
+#### Sign Up Page
+- **Create new user** Requires input of Name, Password and Email Address to create a user account. If successful, returns to the Landing Page in logged in status, otherwise error messages will come up to correct issues.
+
+#### Create New Fundraiser Page
+- **Form with fundraiser details** Requires input of Title, Description, Thumbnail image, $ Target, Creation Date, Open/Closed for pledges toggle, User name (fundraiser owner).
+- **Submit button** to publish (make public).
+- **Nice error pages** for validation of input ie. errors, missing fields etc.
+
+#### Selected Fundraiser Page
+- **Information about fundraiser** shown, as per create new fundraiser page
+- **Pledges made so far** list, with supporter name, $ pledged and comments. Also has a graphical element showing total progress towards $ Target. 
+- **Support this fundraiser** CTA, to make a pledge
 
 ### API Spec
-{{ Fill out the table below to define your endpoints. An example of what this might look like is shown at the bottom of the page. 
 
-It might look messy here in the PDF, but once it's rendered it looks very neat! 
+| URL                  | HTTP Method | Purpose                         | Request Body | Success Response Code | Authentication/Authorisation |
+| -------------------- | ----------- | ------------------------------- | ------------ | --------------------- | ---------------------------- |
+| /fundraisers/        | GET         | Return all fundraisers (list)   | N/A          | 200                   | None                         |
+| /fundraisers/        | POST        | Create new fundraiser           | JSON Payload | 201                   | Any logged in user           |
+| /fundraisers/<pk>/   | GET         | Return one fundraiser (detail)  | N/A          | 200                   | None                         |
+| /fundraisers/<pk>/   | PUT         | Update one fundraiser           | JSON Payload | 200                   | Logged in fundraiser owner   |
+| /pledges/            | GET         | Return all pledges (list)       | N/A          | 200                   | None                         |
+| /pledges/            | POST        | Create new pledge               | JSON Payload | 201                   | Any logged in user           |
+| /pledges/<pk>/       | GET         | Return one pledge (detail)      | N/A          | 200                   | None                         |
+| /pledges/<pk>/       | PUT         | Update one pledge               | JSON Payload | 200                   | Logged in pledge owner       |
+| /users/              | GET         | Return all users (list)         | N/A          | 200                   | None                         |
+| /users/              | POST        | Create new user                 | JSON Payload | 201                   | None                         |
+| /users/              | PUT         | Update user account             | JSON Payload | 200                   | Logged in user account owner |
+| /users/              | POST        | Authenticate user (token)       | JSON Payload | 200                   | None                         |
+| /users/<pk>/         | GET         | Return one user account         | N/A          | 200                   | Any logged in user           |
 
-It can be helpful to keep the markdown preview open in VS Code so that you can see what you're typing more easily. }}
-
-| URL              | HTTP Method                        | Purpose | Request Body | Success Response Code | Authentication/Authorisation |
-| ---------------- | ---------------------------------- | ------- | ------------ | --------------------- | ---------------------------- |
-| /fundraisers/    | Fetch all the fundraisers          | GET     |  N/A         | 200                   | None                         |
-| /fundraisers/    |                                    | POST    | JSON Payload | 201                   | Any logged in user           |
-| /fundraisers/1/  |                                  |         |              |                       |                              |
-| /pledges/        | Fetch all the pledges                | GET     |              | 200                   |                              |
-| /pledges/        | Create a new pledge for a fundraiser | POST    | JSON Payload | 201                   | Any logged in user           |
 
 ### DB Schema
 ![]( {{ ./relative/path/to/your/schema/image.png }} )
+
+### Creat
