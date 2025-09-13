@@ -35,20 +35,41 @@ Emily Sheridan
 | -------------------- | ----------- | ------------------------------- | ------------ | --------------------- | ---------------------------- |
 | /fundraisers/        | GET         | Return all fundraisers (list)   | N/A          | 200                   | None                         |
 | /fundraisers/        | POST        | Create new fundraiser           | JSON Payload | 201                   | Any logged in user           |
-| /fundraisers/<pk>/   | GET         | Return one fundraiser (detail)  | N/A          | 200                   | None                         |
-| /fundraisers/<pk>/   | PUT         | Update one fundraiser           | JSON Payload | 200                   | Logged in fundraiser owner   |
+| /fundraisers/{pk}/   | GET         | Return one fundraiser (detail)  | N/A          | 200                   | None                         |
+| /fundraisers/{pk}/   | PUT         | Update one fundraiser           | JSON Payload | 200                   | Logged in fundraiser owner   |
 | /pledges/            | GET         | Return all pledges (list)       | N/A          | 200                   | None                         |
 | /pledges/            | POST        | Create new pledge               | JSON Payload | 201                   | Any logged in user           |
-| /pledges/<pk>/       | GET         | Return one pledge (detail)      | N/A          | 200                   | None                         |
-| /pledges/<pk>/       | PUT         | Update one pledge               | JSON Payload | 200                   | Logged in pledge owner       |
+| /pledges/{pk}/       | GET         | Return one pledge (detail)      | N/A          | 200                   | None                         |
+| /pledges/{pk}/       | PUT         | Update one pledge               | JSON Payload | 200                   | Logged in pledge owner       |
 | /users/              | GET         | Return all users (list)         | N/A          | 200                   | None                         |
 | /users/              | POST        | Create new user                 | JSON Payload | 201                   | None                         |
 | /users/              | PUT         | Update user account             | JSON Payload | 200                   | Logged in user account owner |
 | /users/              | POST        | Authenticate user (token)       | JSON Payload | 200                   | None                         |
-| /users/<pk>/         | GET         | Return one user account         | N/A          | 200                   | Any logged in user           |
+| /users/{pk}/         | GET         | Return one user account         | N/A          | 200                   | Any logged in user           |
 
 
 ### DB Schema
 ![]( {{ ./relative/path/to/your/schema/image.png }} )
 
-### Creat
+### Create New User (POST):
+
+- **Endpoint** link: https://spirit-the-musical-8ca644308dce.herokuapp.com/users/
+
+- **Body data**
+![](screenshots/create_new_user_screenshot.png)
+
+### Create New Fundraiser (POST):
+
+- **Endpoint** link: https://spirit-the-musical-8ca644308dce.herokuapp.com/fundraisers/
+
+- **Body data**
+![](screenshots/create_new_fundraiser_screenshot.png)
+
+### Successful GET method (Insomnia)
+![](screenshots/GET_method_success_screenshot.png)
+
+### Successful POST method (Insomnia)
+![](screenshots/POST_method_success_screenshot.png)
+
+### Token being returned (Insomnia)
+![](screenshots/token_returned_screenshot.png)
